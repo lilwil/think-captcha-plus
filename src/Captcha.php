@@ -31,7 +31,7 @@
             // 验证码字体大小(px)
             'useCurve' => true,
             // 是否画混淆曲线
-            'calculation' => true,
+            'calculation' => false,
             // 计算模式
             'useNoise' => true,
             // 是否添加杂点
