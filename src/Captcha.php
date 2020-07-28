@@ -181,8 +181,8 @@
             } else {
                 if ($this->calculation) {
                     $arr[] = rand(1, 9);
-                    $calculation = ['+', '*', '-'];
-                    $arr[] = $calculation[rand(0, 2)];
+                    $calculation = ['+', '-'];
+                    $arr[] = $calculation[rand(0, 1)];
                     $arr[] = rand(1, 9);
                     if ($arr[0] < $arr[2]) {
                         $temp = $arr[2];
