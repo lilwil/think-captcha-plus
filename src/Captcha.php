@@ -180,14 +180,18 @@
                 }
             } else {
                 if ($this->calculation) {
-                    $arr[] = rand(1, 9);
+                    $arr[0] = rand(1, 9);
                     $calculation = ['+', '-'];
-                    $arr[] = $calculation[rand(0, 1)];
-                    $arr[] = rand(1, 9);
+                    $arr[2] = rand(1, 9);
                     if ($arr[0] < $arr[2]) {
                         $temp = $arr[2];
                         $arr[0] = $arr[2];
                         $arr[2] = $temp;
+                    }
+                    if ($arr[0] == $arr[2]) {
+                        $arr[1] = '+';
+                    } else {
+                        $arr[1] = $calculation[rand(0, 1)];
                     }
                     if ($arr[1] == '+') {
                         $code[] = $arr[0] + $arr[2];
